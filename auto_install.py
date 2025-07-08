@@ -41,8 +41,9 @@ try:
     import torch
 
     torch_available = True
-except:
+except SystemExit as e:
     torch_available = False
+    raise e
 
 print("PyTorch:", end=" ")
 if torch_available:
