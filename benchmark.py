@@ -259,7 +259,7 @@ def main():
     astra_fps = []
     radon_fps = []
     radon_half_fps = []
-
+    speedup = "Speedup:"
     if "forward" in tasks:
         print("Benchmarking forward from device")
         x = generate_random_images(args.batch_size, args.image_size)
@@ -275,7 +275,7 @@ def main():
         radon_fps.append(args.batch_size / radon_time)
         radon_half_fps.append(args.batch_size / radon_half_time)
 
-        print("Speedup:", astra_time / radon_time)
+        print(speedup, astra_time / radon_time)
         print("Speedup half-precision:", astra_time / radon_half_time)
         print()
 
@@ -295,7 +295,7 @@ def main():
         radon_fps.append(args.batch_size / radon_time)
         radon_half_fps.append(args.batch_size / radon_half_time)
 
-        print("Speedup:", astra_time / radon_time)
+        print(speedup, astra_time / radon_time)
         print("Speedup half-precision:", astra_time / radon_half_time)
         print()
 
@@ -315,7 +315,7 @@ def main():
         radon_fps.append(args.batch_size / radon_time)
         radon_half_fps.append(args.batch_size / radon_half_time)
 
-        print("Speedup:", astra_time / radon_time)
+        print(speedup, astra_time / radon_time)
         print("Speedup half-precision:", astra_time / radon_half_time)
         print()
 
@@ -335,7 +335,7 @@ def main():
         radon_fps.append(args.batch_size / radon_time)
         radon_half_fps.append(args.batch_size / radon_half_time)
 
-        print("Speedup:", astra_time / radon_time)
+        print(speedup, astra_time / radon_time)
         print("Speedup half-precision:", astra_time / radon_half_time)
         print()
 
